@@ -1,0 +1,20 @@
+@startuml Sequence
+
+title Sequence Diagram
+
+autonumber
+
+actor Customer as C
+participant "Web Server" as WS
+participant "Warehouse" as WH
+participant "Stripe" as S
+
+C -> WS: Submit Order
+activate WS
+WS -> WH: Check Stock
+WS -> S: Process Payment
+WS -> WH: Dispatch Order
+WS -> C: Show Success
+deactivate WS
+
+@enduml
