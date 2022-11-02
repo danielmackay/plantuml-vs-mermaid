@@ -1,0 +1,20 @@
+@startuml
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+!include https://raw.githubusercontent.com/plantuml/plantuml-stdlib/master/logos/react.puml
+
+'SHOW_PERSON_PORTRAIT()
+
+title PlantUML C4 Context Diagram
+
+Person(customer, "Customer", "Online Customer")
+System(eCommerce, "E-Commerce", "E-Commerce System", $sprite="react")
+System_Ext(stripe, "Stripe", "Payments")
+System_Ext(warehouse, "Warehouse", "Stock inventory and dispatch")
+
+Rel(customer, eCommerce, "orders products", "HTTPS")
+Rel(eCommerce, stripe, "process payment", "HTTPS")
+Rel(eCommerce, warehouse, "check stock", "HTTPS")
+
+@enduml
+
