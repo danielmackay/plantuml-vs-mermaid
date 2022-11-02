@@ -1,0 +1,36 @@
+@startuml EntityRelationshipSimple
+
+title Entity Relationship Diagram
+
+CUSTOMER ||--|| ORDER : places
+ORDER ||--|{ LINEITEM : contains
+CUSTOMER }|..|{ DELIVERYADDRESS : uses
+
+@enduml
+
+@startuml EntityRelationshipAdvanced
+
+title Entity Relationship Diagram
+
+entity CUSTOMER {
+    string name
+    string custNumber
+    string sector
+}
+
+entity ORDER {
+    int orderNumber
+    string deliveryAddress
+}
+entity LINEITEM {
+    string productCode
+    int quantity
+    float pricePerUnit
+}
+
+CUSTOMER ||--o{ ORDER : places
+
+ORDER ||--|{ LINEITEM : contains
+
+
+@enduml
