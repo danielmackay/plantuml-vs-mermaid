@@ -1,4 +1,4 @@
-@startuml EntityRelationshipSimple
+@startuml
 
 title Entity Relationship Diagram
 
@@ -31,6 +31,5 @@ entity LINEITEM {
 CUSTOMER ||--o{ ORDER : places
 
 ORDER ||--|{ LINEITEM : contains
-
 
 @enduml

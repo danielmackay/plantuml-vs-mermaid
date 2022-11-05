@@ -17,5 +17,4 @@ sequenceDiagram
     WS->>WH: Dispatch Order
     WS->>C: Show Success
     deactivate WS
-
 ```

@@ -1,4 +1,4 @@
-@startuml Activity
+@startuml
 
 start
 :User Submits Order;

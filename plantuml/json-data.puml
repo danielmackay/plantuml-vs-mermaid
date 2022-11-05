@@ -1,4 +1,4 @@
-@startjson JsonDiagram
+@startjson
 
 title JSON Diagram
 
@@ -30,4 +30,5 @@ title JSON Diagram
   "children": [],
   "spouse": null
 }
+
 @endjson
